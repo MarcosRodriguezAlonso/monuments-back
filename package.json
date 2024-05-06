@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky",
@@ -23,10 +24,11 @@
     "eslint": "^8.57.0",
     "eslint-config-xo": "^0.44.0",
     "eslint-config-xo-typescript": "^4.0.0",
+    "@types/eslint-config-prettier": "^6.11.3",
+    "express": "^4.19.2",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
-    "prettier": "^3.2.5",
-    "express": "^4.19.2"
+    "prettier": "^3.2.5"
   },
   "dependencies": {
     "typescript": "^5.4.5"
