@@ -10,7 +10,7 @@
     "build": "tsc",
     "build:dev": "tsc --watch",
     "start": "node .",
-    "commitlint": "commitlint --edit"
+    "start:dev": "node --watch ."
   },
   "author": "",
   "license": "ISC",
