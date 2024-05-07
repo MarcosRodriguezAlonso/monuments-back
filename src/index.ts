@@ -3,6 +3,7 @@ import express, {
   type Response,
   type NextFunction,
 } from "express";
+import PingController from "./server/PingController/PingController.js";
 
 export const app = express();
 
@@ -10,9 +11,9 @@ app.listen(5000, () => {
   console.log("Listening on port 5000");
 });
 
-app.get("/", (_req, res, _next) => {
-  res.status(200).json({ message: "pong" });
-});
+const pingController = new PingController();
+
+app.get("/", pingController.getPong);
 
 app.use((_req, res, next) => {
   res.status(404).json({ error: "Endpoint not found" });
