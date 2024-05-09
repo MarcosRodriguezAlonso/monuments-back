@@ -23,6 +23,7 @@ describe("Given the 1 ping controller", () => {
         json: jest.fn(),
         status: jest.fn().mockReturnThis(),
       };
+
       pingController.getPong(req as Request, res as Response);
 
       expect(res.status).toHaveBeenCalledWith(200);

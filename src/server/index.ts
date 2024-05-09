@@ -1,3 +1,4 @@
+import "dotenv/config";
 import chalk from "chalk";
 import express, {
   type Request,
@@ -8,8 +9,10 @@ import PingController from "../server/PingController/PingController.js";
 
 export const app = express();
 
+const port = process.env.PORT ?? 5000;
+
 app.listen(5000, () => {
-  console.log(`Listening on ${chalk.blue.bold("port 5000")}`);
+  console.log(`Listening on ${chalk.blue.bold(`http://localhost:${port}`)}`);
 });
 
 const pingController = new PingController();
