@@ -3,5 +3,5 @@ module.exports = {
   preset: "ts-jest",
   testEnvironment: "jsdom",
   resolver: "jest-ts-webcompat-resolver",
-  rootDir: "src",
+  testMatch: "[src/**/*.{ts, test.ts}]",
 };
