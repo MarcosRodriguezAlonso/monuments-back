@@ -1,7 +1,7 @@
 import { notFoundError } from "../errorMiddlewares.js";
 import { type Request, type Response } from "express";
 
-describe("Given the notFoundError", () => {
+describe("Given the middleware notFoundError", () => {
   describe("When it receives a response", () => {
     test("Then it should call the response's next method", () => {
       const req = {};
