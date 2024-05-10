@@ -1,7 +1,7 @@
 import PingController from "./PingController";
 import { type Request, type Response } from "express";
 
-describe("Given the 1 ping controller", () => {
+describe("Given the ping controller", () => {
   describe("When it recibes a response", () => {
     const pingController = new PingController();
 
