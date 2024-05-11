@@ -1,24 +1,21 @@
-import express, {
-  type Request,
-  type Response,
-  type NextFunction,
-} from "express";
+import { type Request, type Response, type NextFunction } from "express";
+import ServerError from "../../ServerError/ServerError.js";
 
 export const notFoundError = (
   _req: Request,
   _res: Response,
   next: NextFunction,
 ) => {
-  const error = new Error();
+  const error = new ServerError("Not found", 404);
   next(error);
 };
 
 export const generalError = (
-  error: Error,
+  error: ServerError,
   _req: Request,
   res: Response,
   _next: NextFunction,
 ) => {
-  res.status(500).json(error.message);
+  res.status(error.statusCode).json(error.message);
   console.log(error);
 };
